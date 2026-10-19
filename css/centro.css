@@ -1,0 +1,303 @@
+/* Estilos de la página El centro (centro.html) */
+
+/* Presentación: texto a la izquierda y logo a la derecha */
+.hero_centro {
+  display: flex; /* FLEXBOX */
+  align-items: center;
+  gap: 60px;
+  padding: 80px 0;
+}
+
+.hero_centro_texto {
+  flex: 1;
+}
+
+.hero_centro_texto h1 {
+  margin-bottom: 24px;
+}
+
+.hero_centro_texto p {
+  max-width: 560px;
+}
+
+/* Panel verde con el logo */
+.panel_logo {
+  flex: 1;
+  display: flex; /* FLEXBOX */
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 420px;
+  padding: 32px;
+}
+
+.panel_logo img {
+  width: 340px;
+  max-width: 100%;
+  margin: auto;
+}
+
+/* Dónde está: datos a la izquierda y mapa a la derecha */
+.donde {
+  display: flex; /* FLEXBOX */
+  align-items: center;
+  gap: 60px;
+}
+
+.donde_datos {
+  flex: 1;
+}
+
+.donde_datos h2 {
+  margin-bottom: 8px;
+}
+
+.datos {
+  margin-top: 24px;
+}
+
+/* Cada fila: etiqueta a la izquierda y valor a la derecha */
+.datos_fila {
+  display: flex; /* FLEXBOX */
+  align-items: flex-start;
+  padding: 10px 0;
+}
+
+.datos_etiqueta {
+  display: flex; /* FLEXBOX */
+  align-items: center;
+  width: 220px;
+  gap: 20px;
+  font-size: 1rem;
+}
+
+.datos_etiqueta img {
+  width: 24px;
+  height: 24px;
+}
+
+.datos_valor {
+  flex: 1;
+  color: var(--verde_principal);
+}
+
+.datos_valor address {
+  font-style: normal;
+}
+
+/* Panel verde con el mapa */
+.panel_mapa {
+  flex: 1;
+  display: flex; /* FLEXBOX */
+  justify-content: center;
+  align-items: center;
+  min-height: 340px;
+  padding: 32px;
+}
+
+.panel_mapa img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* Instalaciones: foto a la izquierda y texto a la derecha */
+.instalaciones_contenido {
+  display: flex; /* FLEXBOX */
+  align-items: center;
+  gap: 56px;
+  margin-top: 32px;
+}
+
+.foto_tarjeta {
+  display: flex; /* FLEXBOX */
+  flex-direction: column;
+  width: 588px;
+  gap: 16px;
+  padding: 24px;
+  border: 1px solid var(--verde_claro);
+  border-radius: 16px;
+}
+
+.foto_tarjeta img {
+  width: 320px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.instalaciones_texto {
+  flex: 1;
+}
+
+.instalaciones_texto h3 {
+  margin-bottom: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Servicios: 4 tarjetas en fila (si no caben, bajan a la línea siguiente con wrap) */
+.servicios {
+  display: flex; /* FLEXBOX */
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+/* Gestalt: semejanza, las 4 tarjetas son iguales */
+.servicio {
+  flex: 1;
+  min-width: 240px;
+  display: flex; /* FLEXBOX */
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+  border: 1px solid var(--verde_claro);
+  border-radius: 16px;
+  /* Animación: la tarjeta se mueve en 0.2 segundos */
+  transition: 0.2s;
+}
+
+/* Animación: al pasar el ratón la tarjeta sube 4px */
+.servicio:hover {
+  transform: translateY(-4px);
+  border-color: var(--verde_principal);
+}
+
+.servicio_cabecera {
+  display: flex; /* FLEXBOX */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.servicio_cabecera img {
+  width: 24px;
+  height: 24px;
+}
+
+.servicio_numero {
+  font-size: 1rem;
+  color: var(--verde_principal);
+}
+
+.servicio h3 {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
+.servicio p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+/* El entorno: 3 columnas */
+.entorno {
+  display: flex; /* FLEXBOX */
+  flex-wrap: wrap;
+  gap: 32px 24px;
+  margin-top: 32px;
+}
+
+.entorno_item {
+  flex: 1;
+  min-width: 260px;
+}
+
+.entorno_item img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 12px;
+}
+
+.entorno_item h3 {
+  margin-bottom: 8px;
+}
+
+.entorno_item p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+/* Reflexión personal */
+.cita {
+  display: flex; /* FLEXBOX */
+  flex-direction: column;
+  gap: 20px;
+  margin: 16px 0 80px 0;
+  padding: 48px;
+  color: var(--verde_oscuro);
+  background-color: var(--verde_suave);
+  border-radius: 16px;
+}
+
+.cita_etiqueta,
+.cita figcaption {
+  font-size: 1rem;
+}
+
+.cita blockquote p {
+  font-family: var(--fuente_titulos);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  /* Las columnas pasan a filas (una debajo de otra) */
+  .hero_centro,
+  .donde,
+  .instalaciones_contenido {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+  }
+
+  .hero_centro {
+    padding: 48px 0;
+  }
+
+  .hero_centro_texto,
+  .panel_logo,
+  .donde_datos,
+  .panel_mapa,
+  .instalaciones_texto {
+    flex: none;
+  }
+
+  .foto_tarjeta {
+    width: auto;
+  }
+
+  .cita {
+    padding: 32px;
+  }
+
+  .cita blockquote p {
+    font-size: 1.5rem;
+  }
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+  .datos_fila {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .datos_etiqueta {
+    width: auto;
+  }
+
+  .datos_valor {
+    padding-left: 44px;
+  }
+
+  .panel_logo,
+  .panel_mapa {
+    min-height: 0;
+  }
+
+  .cita {
+    padding: 24px;
+  }
+}
